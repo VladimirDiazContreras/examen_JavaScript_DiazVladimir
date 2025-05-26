@@ -28,6 +28,8 @@ function mostrarDetalle(food) {
     <p><strong>receata:</strong> ${food.strInstructions}</p>
     <iframe width="420" height="315"src="${food.strYoutube}"></iframe>
     <p><strong>categoria:</strong> ${food.strCategory}</p>
+    ${isFavorite(food.strMeal) ? '💖' : '🤍'}
+        </button>
   `;
 }
 
@@ -46,7 +48,7 @@ document.getElementById('next').addEventListener('click', () => {
 });
 //favoritos 
 function getFavorites() {
-  return JSON.parse(localStorage.getItem('carrusel-wrapper2') || '[]');
+  return JSON.parse(localStorage.getItem('Favorite') || '[]');
 }
 
 function isFavorite(strMeal) {
@@ -69,3 +71,36 @@ function toggleFavorite(strMealThumb, strMeal) {
   fetchInitialPets();
   renderFavoriteList();
 }
+// reder
+
+function renderFavoriteList() {
+  const favorites = getFavorites();
+  favoriteList.innerHTML = '';
+
+  if (favorites.length === 0) {
+    favoriteList.innerHTML = '<p>No tienes favoritos aún.</p>';
+    return;
+  }
+
+  favorites.forEach(pet => {
+    const div = document.createElement('div');
+    div.className = 'card';
+    div.innerHTML = `
+      <img src="${pet.photoUrl}" alt="${pet.name}" />
+      <div class="card-body">
+        <h3>${pet.name}</h3>
+        <p>${pet.type}</p>
+        <p>age: ${pet.age}</p>
+        <button class="favorite-btn" onclick="toggleFavorite(
+          ${pet.id},
+          '${pet.name.replace(/'/g, "\\'")}',
+          '${pet.type}',
+          '${pet.photoUrl}',
+          '${pet.age}'
+        )">❌ Quitar</button>
+      </div>
+    `;
+    favoriteList.appendChild(div);
+  });
+}
+
