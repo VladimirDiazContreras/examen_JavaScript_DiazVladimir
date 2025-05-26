@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: url('../storege/fondo.png') no-repeat center center fixed;
+  background-size: cover;
+  
+  background-color:rgb(83, 82, 82) ;
+}
+
+main {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+h1 {
+  position: relative;
+  font-size: 3rem;
+  text-shadow: 2px 2px #000;
+  margin-bottom: 2rem;
+}
+.carrusel {
+  overflow-x: hidden; /* oculta la barra horizontal */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.carrusel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y Edge */
+}
+
+.carrusel-wrapper {
+  display: flex;
+ 
+  align-items: center;
+  background-color: rgba(30, 30, 30, 0.65);
+  padding: 2rem;
+  border-radius: 30px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.flecha {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.carrusel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-behavior: smooth;
+  padding: 1rem;
+  max-width: 80%;
+}
+
+.carrusel img {
+  height: 160px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.carrusel img:hover {
+  transform: scale(1.1);
+}
+
+#detalle {
+  background-color: rgba(177, 177, 177, 0.8);
+  padding: 2rem;
+  border-radius: 20px;
+  margin: 2rem auto;
+  width: 50%;
+}
+
+#volver {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: crimson;
+  color: white;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+.carrusel2 {
+  overflow-x: hidden; /* oculta la barra horizontal */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.carrusel2::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y Edge */
+}
+
+.carrusel-wrapper2 {
+  display: flex;
+ 
+  align-items: center;
+  background-color: rgba(30, 30, 30, 0.65);
+  padding: 2rem;
+  border-radius: 30px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.flecha2 {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.carrusel2 {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-behavior: smooth;
+  padding: 1rem;
+  max-width: 80%;
+}
+
+.carrusel2 img {
+  height: 160px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.carrusel2 img:hover {
+  transform: scale(1.1);
+}
+
+#detalle2 {
+  background-color: rgba(177, 177, 177, 0.8);
+  padding: 2rem;
+  border-radius: 20px;
+  margin: 2rem auto;
+  width: 50%;
+}
+
+#volver2 {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: crimson;
+  color: white;
+  cursor: pointer;
+}
+
+.hidden2 {
+  display: none;
+}
